@@ -24,6 +24,8 @@ jobs:
       - name: Run tests
         run: |
           mkdir -p test-results
+          export PYTHONPATH=$(pwd)/src
+          echo $PYTHONPATH
           pytest --junitxml=test-results/results.xml
 
       - name: Upload test results

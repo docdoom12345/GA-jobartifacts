@@ -24,7 +24,7 @@ jobs:
       - name: Run tests
         run: |
           mkdir -p test-results
-          PYTHONPATH=$(pwd)/src pytest --junitxml=test-results/results.xml
+          pytest --junitxml=test-results/results.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v3
